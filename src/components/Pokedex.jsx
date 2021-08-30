@@ -9,7 +9,7 @@ export default class Pokedex extends Component {
                 <h3>POKEDEX</h3>
                 <div style={pokeList}>
                     {this.props.pokemons.map(pokemon => (
-                    <p onClick={() => updateParent({pokemon: [pokemon.name, pokemon.id, pokemon.type]})} style={pokeOption}>{pokemon.name}</p>
+                    <p onClick={() => updateParent({pokemon: [pokemon.name, pokemon.id, pokemon.type]})} style={pokeOption} key={pokemon.id}>{pokemon.name}</p>
                     ))}
                 </div>
             </div>
